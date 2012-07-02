@@ -1,5 +1,3 @@
-require "acts_as_finder/version"
+require "acts_as_finder/active_record/acts/finder"
 
-module ActsAsFinder
-  # Your code goes here...
-end
+ActiveRecord::Base.send(:include, ActiveRecord::Acts::Finder)

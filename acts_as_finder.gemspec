@@ -4,14 +4,20 @@ require File.expand_path('../lib/acts_as_finder/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Tomasz Gieniusz"]
   gem.email         = ["tomasz.gieniusz@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{This `acts_as` extension provides the capabilities for beautiful finding record in database by specified column.}
+  gem.summary       = %q{A gem allowing beautiful finding records by specified column.}
+  gem.homepage      = "http://github.com/tomgi/acts_as_finder"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "acts_as_finder"
   gem.require_paths = ["lib"]
-  gem.version       = ActsAsFinder::VERSION
+  gem.version       = ActiveRecord::Acts::Finder::VERSION
+  
+  gem.add_dependency "activerecord"
+
+  gem.add_development_dependency "bundler"
+  gem.add_development_dependency "sqlite3"
+  gem.add_development_dependency "rspec"
 end
