@@ -9,7 +9,7 @@ module ActiveRecord
         def acts_as_finder(*fields)
           instance_eval <<-EOV
             @acts_as_finder_fields ||= []
-            @acts_as_finder_fields += #{fields}
+            @acts_as_finder_fields += #{fields.inspect}
             def method_missing(sym, *args, &block)
               begin 
                 super
