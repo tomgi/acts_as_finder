@@ -15,11 +15,10 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = ActiveRecord::Acts::Finder::VERSION
   
-  gem.add_dependency "bundler"
-  gem.add_dependency "rake"
   gem.add_dependency "activerecord"
 
   gem.add_development_dependency "bundler"
+  gem.add_development_dependency "rake"
   gem.add_development_dependency "sqlite3"
   gem.add_development_dependency "rspec"
 end
